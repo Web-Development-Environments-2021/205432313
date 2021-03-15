@@ -5,3 +5,44 @@
 	height: 35px;
 	background: white;
 }
+
+h1 {
+    font-family: 'Comic Sans MS';
+    margin: auto;
+    color: red;
+    text-align: center;
+    font-size: 30px;
+    max-width: 600px;
+    position: relative;
+  }
+  h1:before {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 5px;
+    background: blue;
+    left: 0;
+    top: 50%;
+    position: absolute;
+  }
+  h1:after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 5px;
+    background: blue;
+    right: 0;
+    top: 50%;
+    position: absolute;
+  }
+
+h2{
+    text-align: center;
+}
+a{ 
+    color:rgb(0, 16, 85); 
+    font: bold 100% 'trebuchet ms',helvetica,sans-serif; 
+    background-color:rgb(231, 255, 221); 
+    border:20px solid; 
+    /*border-color: #696 #363 #363 #696; */ 
+} 
