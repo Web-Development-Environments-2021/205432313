@@ -9,7 +9,7 @@
 h1 {
     font-family: 'Comic Sans MS';
     margin: auto;
-    color: red;
+    color: rgb(47, 0, 255);
     text-align: center;
     font-size: 30px;
     max-width: 600px;
@@ -43,7 +43,7 @@ h3{
 	text-align: center;
 }
 a{ 
-    color:rgb(0, 16, 85); 
+    color:rgb(14, 85, 0); 
     font: bold 100% 'trebuchet ms',helvetica,sans-serif; 
     background-color:rgb(231, 255, 221); 
     border:20px solid; 
@@ -55,3 +55,7 @@ h3{
 p{
   text-align: center;
 }
+form{
+  text-align: center;
+}
+.id { width: 90px; height: 390px; border: 1px solid #999999; padding: 5px; }

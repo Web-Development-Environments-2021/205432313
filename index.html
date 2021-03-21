@@ -3,7 +3,7 @@
   <link rel="stylesheet" type="text/css"  href="style.css" /> 
   <div id="fb-root"></div>
   
-  <body style="background-color:MediumSeaGreen;"></body>
+  <body style="background-color:gray;"></body>
 
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="2O44MVJL"></script>
   
@@ -23,21 +23,21 @@
  
 
   <h2>Talma Glucksman</h2>
-  <tr>
-      <a href="#me">About Me</a>
-      <a href="#photos">My Photos</a>
-      <a href="#playlist">My playlist</a>
-      <a href="#like">like</a>
-  </tr>
+  <div class="btn-group">
+      <button href="#me" style="width:20%">About Me</button>
+      <button href="#photos" style="width:20%">My Photos</button>
+      <button href="#playlist" style="width:20%">My playlist</button>
+      <button href="#like" style="width:20%">like</button>
+  </div>
 
   <p id="me"></p>
-  <h1>About Me</h1>
+  <h1  font size="+13">About Me</h1>
   <h2>    ילידת זכרון יעקב. בת למשפחת מייסדים בעיר. בוגרת גימנסיית "ביאליק" בחיפה. סיימה בהצלחה תואר בכלכלה וסוציולוגיה באוניברסיטת תל אביב, ואחרי כן עבדה 40 שנה בבנק הפועלים עם היציאה לפנסיה החלה להתנדב ב"מועצה לשימור אתרים", בה נבחרה לנהל.
   </h2>
 
   <br></br>
   <p id="photos"></p>
-  <h1>My Photos</h1>
+  <h1>My Photos</h1><br></br>
   <td>
       <img src="DSC_9295.jpg" alt="In Maroco" style="width:500px;height:600px;">
   </td>
@@ -68,24 +68,24 @@
   
   <h1>contact me</h1>
   <br/>
-  <form method="post" autocomplete="on">
-    <p><label>Email:
-       <input type="email" id="email" placeholder="name@domain.com"> (name@domain.com)
-       </label></p>
-    <p><label>text:
-       <input type="text" id="txtList" placeholder="Select a month" list="months">
-    </label></p>
- </form>
-</button>
+  
+</body>
 
 <form>
   <div class="controls">
+    <p><label>Writer's Email:
+      <input type="email" id="email" placeholder="name@domain.com"> (name@domain.com)
+      </label></p>
+   <p><label>text:
+      <input type="text" id="txtList" placeholder="Select a month" list="months">
+   </label></p>
 
-      <label for="id">Please write youre message here:</label>
-      <input type="text" id="id" name="id" />
+      <label for="id">Please write youre message here:</label><br></br>
+
+      <textarea name="comments" rows="4" cols="80"></textarea><br></br>
 
       <input type="reset" value="Reset">
-      <input onclick="this.value='email sent, please refresh to send again'" type="button" value="send email" id="myButton1" />
+      <input type="reset" onclick="this.value='email sent, please refresh to send again'" type="button" value="send email" id="myButton1" />
 
   </div>
 </form>
