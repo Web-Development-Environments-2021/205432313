@@ -27,7 +27,7 @@
       <button href="#me" style="width:20%">About Me</button>
       <button href="#photos" style="width:20%">My Photos</button>
       <button href="#playlist" style="width:20%">My playlist</button>
-      <button href="#like" style="width:20%">like</button>
+      <button href="like" style="width:20%">like</button>
   </div>
 
   <p id="me"></p>
@@ -39,7 +39,7 @@
   <p id="photos"></p>
   <h1>My Photos</h1><br></br>
   <td>
-      <img src="DSC_9295.jpg" alt="In Maroco" style="width:500px;height:600px;">
+      <img src="DSC_9295.jpg" alt="cactus" style="width:500px;height:600px;">
   </td>
 
   <br></br>
@@ -84,9 +84,13 @@
 
       <textarea name="comments" rows="4" cols="80"></textarea><br></br>
 
-      <input type="reset" value="Reset">
-      <input type="reset" onclick="this.value='email sent, please refresh to send again'" type="button" value="send email" id="myButton1" />
-
+      
+      <input onclick="this.value='email sent, please refresh to send again'" type="button" value="send email" id="myButton1" onsubmit=this.reset() />
+      <input id="r" type="reset" value="Reset">
+      <input type="button" id="r" onclick="reset()" />
+      <input type="button" 
+       id="myButton1" 
+       onclick="document.getElementById('r').click()" />
   </div>
 </form>
 </body>
