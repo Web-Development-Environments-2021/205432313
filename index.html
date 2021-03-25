@@ -20,15 +20,43 @@
 
 <body>
 
- 
+  <div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:44px">
+    <a href="javascript:void(0);" class="topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button" onclick="open_menu()" title="Menu"></a>
+    <a href="/default.asp" class="topnav-icons fa fa-home w3-left w3-bar-item w3-button" title="Home"></a>
+    <a class="w3-bar-item w3-button" href="#me" title="HTML Tutorial">About Me</a>
+    <a class="w3-bar-item w3-button" href="#photos" title="CSS Tutorial">My Photos</a>
+    <a class="w3-bar-item w3-button" href="#playlist" title="JavaScript Tutorial">My playlist</a>
+    <a class="w3-bar-item w3-button" href="#like" title="SQL Tutorial">like</a>
+
+    <a class="w3-bar-item w3-button w3-right" href="https://courses.w3schools.com" target="blank" title="Courses" onclick="ga('send', 'event', 'Courses' , 'Clicked on courses in top navigation');">COURSES</a>
+
+    <!--
+    <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+    -->
+    
+    <a class="w3-bar-item w3-button w3-right" id="topnavbtn_references" href="javascript:void(0);" onclick="w3_open_nav(&quot;references&quot;)" title="References">REFERENCES <i class="fa fa-caret-down" style="display: inline;"></i><i class="fa fa-caret-up" style="display:none"></i></a>
+    <a class="w3-bar-item w3-button w3-right w3-hide-medium" id="topnavbtn_exercises" href="javascript:void(0);" onclick="w3_open_nav(&quot;exercises&quot;)" title="Exercises">EXERCISES <i class="fa fa-caret-down" style="display: inline;"></i><i class="fa fa-caret-up" style="display:none"></i></a>
+  </div>
+
 
   <h2>Talma Glucksman</h2>
   <div class="btn-group">
-      <button href="#me" style="width:20%">About Me</button>
-      <button href="#photos" style="width:20%">My Photos</button>
-      <button href="#playlist" style="width:20%">My playlist</button>
-      <button href="like" style="width:20%">like</button>
+      <a href="#me">About Me</a>
+      <a href="#photos">My Photos</a>
+      <a href="#playlist">My playlist</a>
+      <a href="#like">like</a>
+      
   </div>
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+  });
 
   <p id="me"></p>
   <h1  font size="+13">About Me</h1>
@@ -39,7 +67,7 @@
   <p id="photos"></p>
   <h1>My Photos</h1><br></br>
   <td>
-      <img src="DSC_9295.jpg" alt="cactus" style="width:500px;height:600px;">
+      <img src="DSC_9295.JPG" alt="" style="width:500px;height:600px;">
   </td>
 
   <br></br>
