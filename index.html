@@ -3,6 +3,18 @@
   <link rel="stylesheet" type="text/css"  href="style.css" /> 
   <div id="fb-root"></div>
   
+  <script src="https://cdn.tiny.cloud/1/ei76mm0ozao3rtil5vkyn0x1cs2klgy2c7dqn60pu3mjlzkc/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+    tinymce.init({
+      selector: "#emoji",
+      plugins: "emoticons",
+      toolbar: "emoticons",
+      toolbar_location: "bottom",
+      menubar: false
+    });
+  </script>
+
+  
   <body style="background-color:gray;"></body>
 
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="2O44MVJL"></script>
@@ -28,7 +40,9 @@
       <a href="#photos">My Photos</a>
       <a href="#playlist">My playlist</a>
       <a href="#like">like</a>
-      
+      <a href="#QR">QR</a>
+      <a href="#QA">Q&A</a>
+      <a href="#contact">contact me</a>
   </div>
 
   <br></br>
@@ -134,7 +148,7 @@
   </h3>
   <!--Talma Glucksman was born in zichron yaakov to a femily of founders and farmers. studied in school at gimnasyia heifa. Has two daughter and a son. Finished succesfully economics and sociology studied in tel aviv university. Worked in bank hapoalim for 40 years. After retiring voluntired for the</h1>
   --> 
-  
+  <p id="QR"></p>
   
   <br/>
   
@@ -142,10 +156,54 @@
 
   <td>
     <img src="QR.PNG" alt="" style="width:250px;height:300px;text-align: center;" >
-</td><br></br>
+</td>
+<p id="QA"></p>
+<br></br>
 
+
+<h1> Q&A </h1>
+
+<table border="1">
+  <tbody>
+    <tr>
+      <td width="25%">web version   </td>
+      <td width="25%">אפשרויות כתיבה\קריאה</td>
+      <td width="25%">מנועי חיפוש</td>
+      <td width="25%">סטטיות ובינה מלאכותית</td>
+    </tr>
+    <tr>
+      <td width="25%">web 1.0</td>
+      <td width="25%">חברות ועיתונאים מפרסמות תוכן שנצרך על ידי האוכלוסייה  הכללית(אתרי חדשות למשל)</td>
+      <td width="25%">In Web 1.0 search engines retrieve macro contents. Search is very fast but many times results are inaccurate or more than users can chew.</td>
+      <td width="25%">Web 1.0 was all about static content, one way publishing of content without any real interaction between readers or publishers or each other.</td>
+    </tr>
+    <tr>
+      <td width="25%">web 2.0</td>
+      <td width="25%">. אפשרות לכל אדם לפרסם תוכן דרך פלטפורמות מתאימות כמו: ויקיפדיה, יוטיוב ועוד. אנשים צורכים תוכן המופק על ידי אנשים פרטיים</td>
+      <td width="25%">In Web 2.0 search engines retrieve tags with micro contents (Furl even retrieves tags with macro contents). The process of tagging is manual, tedious and covers negligible percents of the WWW. Web 2.0 tags every- thing: pictures, links, events, news, Blogs, audio, video, and so on. Google Base even retrieves micro content texts.</td>
+      <td width="25%">Web 2.0 is more about 2 way communication through social networking, blogging, wikis, tagging, user generated content and video.</td>
+    </tr>
+    <tr>
+      <td width="25%">web 3.0</td>
+      <td width="25%">חברות בנו פלטפורמות ש"מתקשרות" עם כל אדם, ומעצבות את חווית הגלישה שלו לפי למידת מכונה. זה גם אפשר לחברות לפרסם לכל אדם תכנים הרלוונטים לו(פייסבוק ועוד) </td>
+      <td width="25%">In Web 3.0 search engines will hopefully retrieve micro content texts which were tagged automatically. This implies translating billions of Web 1.0 macro contents into micro contents. The result could be more precise search because tagging can solve part of the ambiguity that homonyms and synonyms introduce into the process of Search.</td>
+      <td width="25%">Web 3.0 is curiusly undefined. AI and the web learning what you want and delivering you a Personalized web experience.</td>
+    </tr>
+  </tbody>
+  
+</table>
+
+<h5>
+    Use case example - most advanced cell phone
+</h5>
+<h6>
+  - web 1.0: we must write a specific url in order to reach the data.
+  <br>- web 2.0: using "most advanced cell phone" as a query to a search engines and we will see result from the query as web tags.<br>
+  - web 3.0: using "most advanced cell phone" as a query to a search engines and we will see result that contain the query words and semantic words as tags or web info.
+</h6>
+<p id="contact"></p>
+<br></br>
 <h1>contact me</h1>
-</body>
 
 
 <form>
@@ -153,14 +211,12 @@
     <p><label>Writer's Email:
       <input type="email" id="email" placeholder="name@domain.com"> (name@domain.com)
       </label></p>
-   <p><label>subject:
-      <input type="text" id="txtList" placeholder="" list="months">
-   </label></p>
+
 
       <label for="id">Please write the massage here:</label><br></br>
 
-      <textarea name="comments" rows="4" cols="80"></textarea><br></br>
-
+      <textarea id = "emoji" name = "comments" rows = "15" cols = "150"></textarea>
+      <br></br>
       
       <input onclick="this.value='email sent, please refresh to send again'" type="button" value="send email" id="myButton1" onsubmit=this.reset() />
       <input id="r" type="reset" value="Reset">
