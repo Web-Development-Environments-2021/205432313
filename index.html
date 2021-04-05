@@ -206,7 +206,7 @@
 <h1>contact me</h1>
 
 
-<form>
+<form action="mailto:barakyac@post.bgu.ac.il" method="post" enctype="text/plain">
   <div class="controls">
     <p><label>Writer's Email:
       <input type="email" id="email" placeholder="name@domain.com"> (name@domain.com)
@@ -215,11 +215,11 @@
 
       <label for="id">Please write the massage here:</label><br></br>
 
-      <textarea id = "emoji" name = "comments" rows = "15" cols = "150"></textarea>
+      <textarea id = "emoji" name = "" rows = "15" cols = "150"></textarea>
       <br></br>
       
-      <input onclick="this.value='email sent, please refresh to send again'" type="button" value="send email" id="myButton1" onsubmit=this.reset() />
-      <input id="r" type="reset" value="Reset">
+      <input type="submit" value="send email">
+      <input type="reset" value="Reset">
       
   </div>
 </form>
