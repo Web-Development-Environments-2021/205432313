@@ -7,4 +7,4 @@ name: Barak Yacouel
 
 id 205432313
 
-https://web-development-environments-2021.github.io/assignment1-barakya/
+https://web-development-environments-2021.github.io/205432313/
